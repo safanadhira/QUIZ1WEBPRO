@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safnad's Website!</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\Safa\Downloads/cat.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+</head>
+<body>
+    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+	    <div class="wheel"></div>
+	    <div class="hamster">
+		    <div class="hamster__body">
+			    <div class="hamster__head">
+				    <div class="hamster__ear"></div>
+				    <div class="hamster__eye"></div>
+				    <div class="hamster__nose"></div>
+			    </div>
+			    <div class="hamster__limb hamster__limb--fr"></div>
+			    <div class="hamster__limb hamster__limb--fl"></div>
+			    <div class="hamster__limb hamster__limb--br"></div>
+			    <div class="hamster__limb hamster__limb--bl"></div>
+			    <div class="hamster__tail"></div>
+		    </div>
+	    </div>
+	    <div class="spoke"></div>
+    </div>
+    <style>
+        /* Additional styles for the body */
+        body {
+            transition: background-color 1s; /* Smooth transition for background color change */
+            background-color: #94bac6; /* Initial background color */
+            margin: 0; /* Remove default body margin */
+            height: 100vh; /* Full height */
+        }
+
+        /* Ensure header, footer, and main inherit the body background */
+        header, footer, main {
+            background-color: transparent; /* Inherit body's background */
+            color: rgb(0, 0, 0); /* Text color for contrast */
+        }
+
+        /* Style the nav and position it at the top of the page */
+        nav {
+            position: fixed;
+            top: 0; /* Align to the top */
+            left: 0;
+            width: 100%; /* Make it span the full width */
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* Align the nav items in a row */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start; /* Center horizontally */
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px; /* Space between items */
+        }
+
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .hometown-content {
+            font-size: 20px;
+            margin-top: 40px;
+            line-height: 1.6;
+        }
+
+        #hover-image {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            max-height: 300px;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Style to display the list items horizontally */
+        .hometown-content ul {
+            display: flex;
+            justify-content: space-around; /* Spread list items */
+            padding: 0;
+        }
+
+        /* Style each list item */
+        .hometown-content li {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        /* Add some style to the images */
+        .hometown-content li img {
+            margin-top: 10px;
+            width: 150px; /* Width of each image */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Container for image and description */
+        .image-description-container {
+            position: relative;
+            display: inline-block;
+            margin: 20px; /* Margin for spacing */
+        }
+
+        /* Hide description by default */
+        .description {
+            display: none;
+            text-align: center;
+            margin-top: 5px; /* Space between image and description */
+        }
+
+        /* Show description on hover */
+        .hometown-content li:hover .description {
+            display: block;
+        }
+    </style>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="quiz1.html" data-color="bg-color-home" data-image="C:\Users\Safa\Downloads/cat.ico">Home</a></li>
+                <li><a href="profile.html" data-color="bg-color-profile" data-image="C:\Users\Safa\Downloads/profile.png">Profile</a></li>
+                <li><a href="hometown.html" data-color="bg-color-hometown" data-image="C:\Users\Safa\Downloads/hometown.png">Hometown</a></li>
+                <li><a href="food.html" data-color="bg-color-food" data-image="C:\Users\Safa\Downloads/food.png">Local Food</a></li>
+                <li><a href="tourist.html" data-color="bg-color-tourist" data-image="C:\Users\Safa\Downloads/tourist.png">Tourist Places</a></li>
+            </ul>
+        </nav>
+        <img id="hover-image" src="C:\Users\Safa\Downloads/cat.ico" alt="Hover Image">
+    </header>
+    
+    <main>
+        <h2>Hello!</i>!</h2>
+        <div class="hometown-content">
+            <p>
+                <ul>
+                <li>
+                    <img src="C:\Users\Safa\Downloads\webcam-toy-photo3.jpg" alt="Jawa Timur Park">
+                    <div class="description">
+                    Name : Safa Nadhira Azzahra<br>
+                    NRP : 5025231086<br>
+                    Hobby : Singing!<br>
+                    Favorite Food : Siomay<br>
+                    Favorite Drink : Popice
+                    </div>
+                </li>
+            </ul>
+            </p>
+        </div>
+    </main>
+    
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to change background color and image based on hovered item
+        function changeBackgroundColor(colorClass, imageSrc) {
+            document.body.className = colorClass; // Change the body class
+            const hoverImage = document.getElementById('hover-image');
+            hoverImage.src = imageSrc; // Change the image source
+            hoverImage.style.opacity = 1; // Make the image visible
+        }
+    
+        // Function to reset background color and image
+        function resetBackgroundColor() {
+            document.body.className = ''; // Remove class
+            const hoverImage = document.getElementById('hover-image');
+            hoverImage.src = 'C:\Users\Safa\Downloads/cat.ico'; // Reset to default image
+            hoverImage.style.opacity = 0; // Hide the image
+        }
+    
+        // Add event listeners to each navigation link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                changeBackgroundColor(link.dataset.color, link.dataset.image); // Change background color and image
+            });
+            
+            link.addEventListener('mouseout', resetBackgroundColor); // Reset on mouse out
+        });
+    </script>            
+</body>
+</html>

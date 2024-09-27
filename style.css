@@ -1,0 +1,186 @@
+body {
+    font-family: Perpetua;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    background-color: #dfc19a;
+    height: 100vh; /* Make sure body takes full height */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+header {
+    background-color: #dfc19a;
+    color: #000000;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    display: flex; /* Use flexbox for the nav */
+    position: relative;
+    z-index: 1;
+    margin-top: 75px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Keep the list items in a row */
+}
+
+nav ul li {
+    margin-right: 15px; /* Space between items */
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #dfc19a;
+    color: #000000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.cat-icon {
+    width: 85px; /* Set width to your preference */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin: 5px auto; /* Center horizontally with margin */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    transition: transform 0.3s; /* Smooth transition for hover */
+}
+
+/* Add these styles for hover effect */
+nav ul li a:hover {
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Add a class for background color changes */
+.bg-color-home {
+    background-color: #dfc19a; /* Color when hovering over Home */
+}
+
+.bg-color-profile {
+    background-color: #94bac6; /* Color when hovering over Profile */
+}
+
+.bg-color-hometown {
+    background-color: #7dac7d; /* Color when hovering over Hometown */
+}
+
+.bg-color-food {
+    background-color: #ececa5; /* Color when hovering over Local Food */
+}
+
+.bg-color-tourist {
+    background-color: #d49993; /* Color when hovering over Tourist Places */
+}
+
+#hover-image {
+    position: absolute; /* Position the image absolutely */
+    top: 3%; /* Move it down to the center vertically */
+    left: 50%; /* Move it right to the center horizontally */
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 40%; /* Adjust size as needed */
+    max-height: 300px; /* Adjust size as needed */
+    object-fit: cover; /* Ensure the image covers its container */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s; /* Smooth transition for the image change */
+}
+
+.hometown-content ul {
+    display: flex;
+    justify-content: space-around; /* Spread list items */
+    padding: 0;
+    margin-top: 20px; /* Add space above the list */
+}
+
+/* Style each list item */
+.hometown-content li {
+    list-style-type: none;
+    text-align: center;
+    margin: 20px; /* Add space around each list item */
+}
+
+/* Add some style to the images */
+.hometown-content li img {
+    margin-top: 10px;
+    margin-bottom: 20px; /* Add space below each image */
+    width: 150px; /* Width of each image */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Container for image and description */
+.image-description-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px; /* Margin for spacing */
+}
+
+/* Hide description by default */
+.description {
+    display: none;
+    text-align: center;
+    margin-top: 5px; /* Space between image and description */
+}
+
+/* Show description on hover */
+.image-description-container:hover .description {
+    display: block;
+}
+
+/* Specific styles for the food content */
+.food-content {
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+/* Layout for the list of food items */
+.food-content ul {
+    display: flex;
+    justify-content: space-around; /* Spread list items horizontally */
+    padding: 0;
+}
+
+/* Style for each food list item */
+.food-content li {
+    list-style-type: none; /* Remove bullet points */
+    text-align: center; /* Center the content */
+    margin: 20px; /* Spacing around the food items */
+    position: relative; /* To position the description */
+}
+
+/* Style for images */
+.food-content li img {
+    margin-top: 10px;
+    width: 150px; /* Set the width of the food images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Show description on hover */
+.food-content li:hover .description {
+    display: block; /* Show the description when hovering */
+}
